@@ -16,7 +16,9 @@
     "skipRepeats": "node ./skipRepeats.js",
     "switch": "node ./switch.js",
     "zip": "node ./zip.js",
-    "start": "npm run filter-map-reduce && npm run flatMap && npm run concatMap && npm run merge && npm run merge-nested && npm run zip && npm run scan && npm run slice && npm run skipRepeats && npm run switch"
+    "start": "npm run filter-map-reduce && npm run flatMap && npm run concatMap && npm run merge && npm run merge-nested && npm run zip && npm run scan && npm run slice && npm run skipRepeats && npm run switch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@reactivex/rxjs": "^5.0.1",
@@ -26,6 +28,8 @@
     "highland": "^2.10.1",
     "kefir": "^3.6.1",
     "rx": "^4.1.0",
-    "xstream": "10.x"
-  }
+    "xstream": "10.x",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
